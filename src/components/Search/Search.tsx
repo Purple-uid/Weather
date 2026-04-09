@@ -9,7 +9,7 @@ import './Search.css'
 function Search() {
     const [ search, setSearch ] = useState("");
     const { setCity, setWeather } = useWeatherStor()
-    const key = import.meta.env.VITE_WEATHER_KEY
+    const key = "b1c3afe011d6f345179bc77f5f7c6d56"
     const { refetch, isLoading } = useQuery({
         queryKey: ['city', search],
         queryFn: async () => {
