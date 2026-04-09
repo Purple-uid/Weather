@@ -8,7 +8,7 @@ import './Search.css'
 
 function Search() {
     const [ search, setSearch ] = useState("");
-    const { weather, setCity, setWeather } = useWeatherStor()
+    const { setCity, setWeather } = useWeatherStor()
     const key = import.meta.env.VITE_WEATHER_KEY
     const { refetch, isLoading } = useQuery({
         queryKey: ['city', search],

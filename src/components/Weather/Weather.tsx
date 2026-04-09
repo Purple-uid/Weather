@@ -35,7 +35,7 @@ function Weather() {
                         </div>
                         <div className="item">
                             <span className="label">Ветер</span>
-                            <span className="value">{weather.wind.speed} м/с</span>
+                            <span className="value">{weather.wind.speed.toFixed(1)} м/с</span>
                         </div>
                     </div>
                 </div>
