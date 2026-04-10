@@ -1,6 +1,8 @@
 # Weather App
-
 Приложение погоды с поиском по городу.
+
+## Ссылка 
+https://weather-tq4d.vercel.app
 
 ## Технологии
 - React + TypeScript
@@ -17,6 +19,3 @@
 ## Запуск
 npm install
 npm run dev
-
-## Ссылка 
-https://weather-tq4d.vercel.app
