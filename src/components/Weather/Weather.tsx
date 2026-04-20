@@ -1,8 +1,8 @@
-import { useWeatherStor } from '../../store/weatherStore'
+import { useWeatherStore } from '../../store/weatherStore'
 import './Weather.css'
 
 function Weather() {
-    const { weather } = useWeatherStor()
+    const { weather } = useWeatherStore()
     return (
         <div>
             {weather ? (

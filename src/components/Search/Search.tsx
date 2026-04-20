@@ -1,4 +1,4 @@
-import { useWeatherStor } from '../../store/weatherStore'
+import { useWeatherStore } from '../../store/weatherStore'
 import { useState, useCallback } from "react"
 import { useQuery } from "@tanstack/react-query"
 import axios from 'axios'
@@ -8,7 +8,7 @@ import './Search.css'
 
 function Search() {
     const [ search, setSearch ] = useState("");
-    const { setCity, setWeather } = useWeatherStor()
+    const { setCity, setWeather } = useWeatherStore()
     const key = "b1c3afe011d6f345179bc77f5f7c6d56"
     const { refetch, isLoading } = useQuery({
         queryKey: ['city', search],

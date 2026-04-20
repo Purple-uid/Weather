@@ -1,4 +1,5 @@
 import { create } from "zustand"
+import { persist } from "zustand/middleware"
 import type { WeatherData } from "../types/types"
 
 interface WeatherStor {
@@ -8,18 +9,14 @@ interface WeatherStor {
     setWeather: (data: WeatherData) => void
 }
 
-export const useWeatherStor = create<WeatherStor>((set) => ({
-    city: localStorage.getItem('city') || 'Los Angeles',
-
-    weather: JSON.parse(localStorage.getItem('weather') || ('null')),
-
-    setCity: (name) => set(() => {
-        localStorage.setItem('city', (name));
-        return { city: name };
+export const useWeatherStore = create<WeatherStor>()(
+  persist(
+    (set) => ({
+      city: 'Los Angeles',
+      weather: null,
+      setCity: (name) => set({ city: name }),
+      setWeather: (data) => set({ weather: data }),
     }),
-
-    setWeather: (data) => set(() => {
-        localStorage.setItem('weather', JSON.stringify(data));
-        return { weather: data };
-    })
-}))
+    { name: 'weather-store' }
+  )
+)
