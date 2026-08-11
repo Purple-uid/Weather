@@ -4,6 +4,9 @@
 ## Ссылка 
 https://weather-tq4d.vercel.app
 
+## Roadmap
+https://roadmap.sh/projects/weather-app
+
 ## Технологии
 - React + TypeScript
 - Zustand
